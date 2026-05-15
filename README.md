@@ -6,3 +6,7 @@ RM: 569410
 
 Nome: Nathan Hiroshi Watanabe
 RM:572806
+
+
+Nome: Angela Sousa Takezawa
+RM: 570797
