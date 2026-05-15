@@ -65,3 +65,61 @@ void menu() {
     printf("<<<<<<<<<<<<<<>>>>>>>>>>>>\n");
     printf("Escolha uma opcao: ");
 }
+
+// CONSULTAR SALDO
+void consultarSaldo(float saldo) {
+ 
+    printf("\n--- SALDO ATUAL ---\n");
+    printf("R$ %.2f\n", saldo);
+    printf("-------------------\n");
+}
+ 
+// SAQUE
+float realizarSaque(float saldo) {
+ 
+    float valor;
+ 
+    printf("Digite o valor do saque: ");
+    scanf("%f", &valor);
+ 
+    if(valor > 1000.00) {
+ 
+        printf("Limite diario excedido!\n");
+ 
+    } else if(valor > saldo) {
+ 
+        printf("Saldo insuficiente!\n");
+ 
+    } else if(valor <= 0) {
+ 
+        printf("Valor invalido!\n");
+ 
+    } else {
+ 
+        saldo -= valor;
+        printf("Saque realizado!\n");
+    }
+ 
+    return saldo;
+}
+ 
+// DEPOSITO
+float realizarDeposito(float saldo) {
+ 
+    float valor;
+ 
+    printf("Digite o valor do deposito: ");
+    scanf("%f", &valor);
+ 
+    if(valor > 0) {
+ 
+        saldo += valor;
+        printf("Deposito realizado!\n");
+ 
+    } else {
+ 
+        printf("Valor invalido!\n");
+    }
+ 
+    return saldo;
+}
